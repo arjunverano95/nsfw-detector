@@ -1,0 +1,28 @@
+{
+  "name": "nsfw-detector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "scan": "tsx scripts/nsfw-scan.ts \"images/**/*.{jpg,jpeg,png,webp}\"",
+    "scan:blur": "tsx scripts/nsfw-scan.ts \"images/**/*.{jpg,jpeg,png,webp}\" nsfw_output --blur"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-wasm": "^4.22.0",
+    "csv-writer": "^1.6.0",
+    "fast-glob": "^3.3.3",
+    "nsfwjs": "^4.2.1",
+    "sharp": "^0.34.4"
+  }
+}

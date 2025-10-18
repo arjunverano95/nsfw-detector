@@ -75,22 +75,7 @@ async function blurImage(inputPath: string, outputPath: string) {
   }
 
   // heavy blur pass
-  const blurred = await img.blur(20).toBuffer();
-
-  // draw a black overlay at center (belt-and-suspenders)
-  const overlay = Buffer.from(
-    `<svg width="${width}" height="${height}">
-      <rect x="0" y="${Math.floor(
-        height * 0.3
-      )}" width="${width}" height="${Math.floor(
-      height * 0.4
-    )}" fill="black" opacity="0.85"/>
-    </svg>`
-  );
-
-  await sharp(blurred)
-    .composite([{ input: overlay, top: 0, left: 0 }])
-    .toFile(outputPath);
+  await img.blur(20).toFile(outputPath);
 }
 
 async function main() {

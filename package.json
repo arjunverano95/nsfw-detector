@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "format": "npx prettier --write .",
     "scan": "tsx scripts/nsfw-scan.ts \"images/**/*.{jpg,jpeg,png,webp}\"",
     "scan:blur": "tsx scripts/nsfw-scan.ts \"images/**/*.{jpg,jpeg,png,webp}\" nsfw_output --blur"
   },
@@ -20,6 +21,7 @@
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
     "@tensorflow/tfjs-backend-wasm": "^4.22.0",
+    "buffer": "^6.0.3",
     "csv-writer": "^1.6.0",
     "fast-glob": "^3.3.3",
     "nsfwjs": "^4.2.1",

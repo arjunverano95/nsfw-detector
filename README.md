@@ -73,7 +73,6 @@ npx tsx scripts/nsfw-scan.ts "path/to/images/**/*.{jpg,jpeg,png,webp}" output_di
 The tool generates:
 
 1. **CSV Report** (`nsfw_report.csv`): Detailed analysis results including:
-
    - File path
    - Flagged status (true/false)
    - Top classification and probability
